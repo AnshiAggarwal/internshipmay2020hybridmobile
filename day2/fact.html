@@ -1,0 +1,26 @@
+<html>
+    <head></head>
+    <body>
+        <input type="text" id="num">
+        <button type="button" onclick="factorial">click</button>
+
+        <script>
+            var num=document.getElementById("num").value;
+            function factorial(num){
+                if(num==""){
+                    alert("enter a alue");
+                    num.focus();
+                }
+                else{
+                    var n=parseInt(num);
+                    var f=1;
+                    for(i=1;i<=n;i++){
+                        f=f*i;
+                    }
+                    alert(f);
+                }
+            }
+
+        </script>
+    </body>
+</html>
