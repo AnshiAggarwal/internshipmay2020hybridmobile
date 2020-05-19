@@ -1,0 +1,23 @@
+<html>
+    <head></head>
+    <body>
+        <script src="jquery-3.5.1.js"></script>
+        <input type="text" id="num">
+        <input type="text" id="result">
+        <input type="button" id="fac">
+
+        <script>
+            $(document).ready(function(){
+                $("#fac").click(function(){
+                    var n= parseInt($("#num").val());
+                    fact=1;
+                    for(i=1;i<=n;i++){
+                        fact=fact*i;
+                    }
+
+                    $("#result").val(fact);
+                })
+            });
+        </script>
+    </body>
+</html>
