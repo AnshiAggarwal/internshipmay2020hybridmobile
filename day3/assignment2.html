@@ -1,0 +1,25 @@
+<html>
+    <head></head>
+    <body>
+        <h1>internship assignment</h1>
+        <h2>assignment2</h2>
+        <p>hide when click on it</p>
+        <h2>change to green color</h2>
+        <p>try it also....</p>
+        <script src="jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("p").click(function(){
+                $(this).hide();
+            });
+            $("h1").click(function(){
+                $(this).css("color","red");
+            });
+            $("h2").click(function(){
+                $(this).css("color","green");
+            });
+        });
+    </script>
+
+</body>
+</html>
