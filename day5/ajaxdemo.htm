@@ -1,0 +1,39 @@
+<script src="jquery-3.5.1.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#save").click(function(){
+            var bookno=$("#bookno").val();
+            var title=$("#title").val();
+            var author=$("#author").val();
+            var price=$("#price").val();
+            $.post("savebook.php",{bookno:bookno,title:title,author:author,price:price},function(res,status){
+                if(res==""){
+                    $("#msg").text("data saved");
+                }
+                else{
+                    $("#msg").text("not saved..error"+res);
+                }
+            });
+        });
+
+
+        $("#search").click(function(){
+            var bookno=$("#bookno").val();
+            
+           $.post("searchbook.php",{bookno:bookno},function(r,s){
+            var s=r.split(",");
+            $("#title").val(s[0]);
+            $("#author").val(s[1]);
+            $("#price").val(s[2]);
+           });
+    });
+
+    });
+</script>
+
+book number<input type="number" id="bookno"><input type="button" id="search" value="search"><br>
+title<input type="text" id="title"><br>
+author<input type="text" id="author"><br>
+price<input type="number" id="price"><br>
+<input type="button" id="save" value="save">
+<div id="msg"></div>
