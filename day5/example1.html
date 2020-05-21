@@ -1,0 +1,24 @@
+<script src="jquery-3.5.1.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#save").click(function(){
+            var rollno=$("#rollno").val();
+            var name=$("#name").val();
+            var course=$("#course").val();
+            $.post("example1.php",{rollno:rollno,name:name,course:course},function(res,status){
+                if(res=="done"){
+                    $("#msg").text("data saved");
+                }
+                else{
+                    $("#msg").text("not sved..eroor"+res);
+                }
+            });
+        });
+    });
+</script>
+
+Roll no<input type="text" id="rollno"><br>
+name<input type="text" id="name"><br>
+course<input type="text" id="course"><br>
+<input type="button" value="save" id="save">
+<div id="msg"></div>

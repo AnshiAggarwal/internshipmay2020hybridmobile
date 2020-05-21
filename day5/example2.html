@@ -1,0 +1,19 @@
+<script src="jquery-3.5.1.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $("#search").click(function(){
+            var rollno=$("#rollno").val();
+            
+           $.post("example2.php",{rollno:rollno},function(r,s){
+               $("#result").text(r);
+           });
+    });
+    });
+</script>
+
+
+roll no<input type="text" id="rollno"><br>
+<input type="button" value="search" id="search">
+<div id="result"></div>
+
