@@ -1,0 +1,44 @@
+<!-- start of the program by Anshi Aggarwal -->
+
+<html>
+<head>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+    <script src="jquery-3.5.1.js"></script>
+    <script>
+        $(document).ready(function(){
+           $("#search").click(function(){
+            var empid=$("#empid").val();
+            $.post("searchemployee.php",{empid:empid},function(res,status){
+                var result=JSON.parse(res);
+                $("#name").html(result.name);
+                $("#designation").html(result.designation);
+                $("#salary").html(result.salary);
+
+                });
+           });
+
+        });
+    </script>
+    <nav class="navbar navbar-dark bg-dark mb-2"><a class="navbar-brand" href="#">SEARCH EMPLOYEE</a></nav>
+    <div class="container">
+    <div class="card text-center">
+        Employee ID<input type="number" id="empid" class="mb-2">
+        <input type="button" value="Search" id="search" class="btn btn-primary mb-2">
+    
+        <div>
+            Employee Name: <span id="name"></span>
+        </div>
+        <div>
+            Designation: <span id="designation"></span>
+        </div>
+        <div>
+            Salary: <span id="salary"></span>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
+
+<!-- end of the program by Anshi Aggarwal -->
