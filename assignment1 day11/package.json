@@ -1,0 +1,16 @@
+{
+  "name": "assignment1-day11",
+  "version": "1.0.0",
+  "description": "assignment1 of day11",
+  "main": "insertitem.js",
+  "dependencies": {
+    "mongodb": "^3.5.8",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "anshi aggarwal",
+  "license": "ISC"
+}
