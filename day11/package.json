@@ -1,0 +1,14 @@
+{
+  "name": "day11",
+  "version": "1.0.0",
+  "description": "frst demo of nodeJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anshi Aggarwal",
+  "license": "ISC",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  }
+}
